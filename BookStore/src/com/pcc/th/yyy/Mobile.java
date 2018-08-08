@@ -1,19 +1,34 @@
 package com.pcc.th.yyy;
 
-public class Mobile {
-	void call() {
-		
+public interface Mobile {
+	void call();
+	void playMusic();
+}
+
+interface Mobile2018 {
+	void takePhoto();
+}
+
+class IPhone implements Mobile, Mobile2018 {
+	@Override
+	public void takePhoto() {
 	}
-	
-	void playMusic() {
-		
+
+	@Override
+	public void call() {
+	}
+
+	@Override
+	public void playMusic() {
 	}
 }
 
-class Samsung extends Mobile {
-	
-}
+class Samsung implements Mobile {
+	@Override
+	public void call() {
+	}
 
-class IPhone extends Mobile {
-	
+	@Override
+	public void playMusic() {
+	}
 }
